@@ -362,7 +362,6 @@ INSTALLED_APPS = [
     "django_jinja.contrib._humanize",
     "sr",
     "easy_thumbnails",
-    "raven.contrib.django.raven_compat",
 ]
 
 WSGI_APPLICATION = "taiga.wsgi.application"
@@ -610,6 +609,8 @@ FRONT_SITEMAP_PAGE_SIZE = 25000
 
 
 EXTRA_BLOCKING_CODES = []
+
+EXTRA_ARCHIVED_CODES = []
 
 MAX_PRIVATE_PROJECTS_PER_USER = None  # None == no limit
 MAX_PUBLIC_PROJECTS_PER_USER = None  # None == no limit

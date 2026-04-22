@@ -14,7 +14,7 @@ chown -R taiga:taiga /taiga-back
 
 # Start Celery processes
 echo Starting Celery...
-exec su-exec taiga celery -A taiga.celery worker -B \
+exec runuser -u taiga -- -A taiga.celery worker -B \
     --concurrency 4 \
     -l INFO \
     "$@"
